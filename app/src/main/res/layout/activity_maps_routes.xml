@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:fillViewport="true"
+    android:layout_marginTop="25dp"
     tools:context=".MapsRoutesActivity">
 
     <LinearLayout
@@ -24,6 +25,7 @@
             android:orientation="horizontal">
 
             <ImageButton
+                android:id="@+id/btnBack"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:background="@android:color/transparent"
@@ -46,37 +48,12 @@
             app:cardCornerRadius="18dp"
             app:cardElevation="4dp">
 
-            <LinearLayout
+            <fragment
+                android:id="@+id/map_route"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/cardgreen"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_height="match_parent" />
 
-                <ImageView
-                    android:layout_width="46dp"
-                    android:layout_height="46dp"
-                    android:src="@drawable/ic_agent_route"
-                    app:tint="@color/textColor" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="14dp"
-                    android:fontFamily="@font/yeonsung_regular"
-                    android:text="Live Route Preview"
-                    android:textColor="@color/textColor"
-                    android:textSize="22sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/lato_regular"
-                    android:text="Restaurant to Customer via Park Street"
-                    android:textColor="@color/green"
-                    android:textSize="14sp" />
-            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -113,7 +90,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:fontFamily="@font/lato_regular"
-                    android:text="Drop: 14 Lake View Road"
+                    android:text="Drop: Hazratganj, Lucknow"
                     android:textColor="#444444" />
 
                 <TextView
@@ -156,6 +133,7 @@
                     android:textSize="17sp" />
 
                 <TextView
+                    android:id="@+id/btnOpenMaps"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="14dp"
@@ -167,6 +145,7 @@
                     android:textColor="@color/white" />
 
                 <TextView
+                    android:id="@+id/btnShareLiveLocation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -175,7 +154,9 @@
                     android:gravity="center"
                     android:padding="12dp"
                     android:text="Share Live Location"
-                    android:textColor="@color/green" />
+                    android:textColor="@color/green"
+                    android:clickable="true"
+                    android:focusable="true" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -184,7 +165,7 @@
                     android:background="@drawable/edittext_bg"
                     android:fontFamily="@font/lato_regular"
                     android:padding="12dp"
-                    android:text="Suggested route: Avoid AJC Bose Road traffic and take Loudon Street"
+                    android:text="Suggested route: Follow Hazratganj Main Road for the fastest route."
                     android:textColor="#555555" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>

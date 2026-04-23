@@ -4,9 +4,7 @@ plugins {
 
 android {
     namespace = "com.source1.deliveryagent"
-    compileSdk {
-        version = release(36)
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.source1.deliveryagent"
@@ -39,6 +37,10 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.okhttp)
+    implementation(libs.glide)
+    implementation(libs.play.services.maps)
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

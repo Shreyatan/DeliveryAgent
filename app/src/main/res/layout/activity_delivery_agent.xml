@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -16,7 +16,7 @@
         android:paddingStart="14dp"
         android:paddingTop="24dp"
         android:paddingEnd="14dp"
-        android:paddingBottom="24dp">
+        android:paddingBottom="60dp"> <!-- Added more bottom padding -->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -108,7 +108,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:fontFamily="@font/lato_regular"
-                            android:text="2 active drops | COD enabled"
+                            android:text="2 active drops"
                             android:textColor="@color/green"
                             android:textSize="13sp" />
                     </LinearLayout>
@@ -192,6 +192,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/tvEarnings"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/lato_bold"
@@ -229,6 +230,7 @@
             android:useDefaultMargins="true">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardAssignedOrders"
                 android:layout_width="0dp"
                 android:layout_height="112dp"
                 android:layout_columnWeight="1"
@@ -261,6 +263,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardMapsRoute"
                 android:layout_width="0dp"
                 android:layout_height="112dp"
                 android:layout_columnWeight="1"
@@ -293,6 +296,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardCallCustomer"
                 android:layout_width="0dp"
                 android:layout_height="112dp"
                 android:layout_columnWeight="1"
@@ -325,6 +329,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardCodPayment"
                 android:layout_width="0dp"
                 android:layout_height="112dp"
                 android:layout_columnWeight="1"
@@ -342,7 +347,7 @@
                     <ImageView
                         android:layout_width="26dp"
                         android:layout_height="26dp"
-                        android:src="@drawable/dollar"
+                        android:src="@drawable/rupee"
                         app:tint="#D7C605" />
 
                     <TextView
@@ -350,16 +355,19 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:fontFamily="@font/yeonsung_regular"
-                        android:text="COD Payment"
+                        android:text="Payment"
                         android:textColor="#B59A00"
                         android:textSize="16sp" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardMyProfile"
                 android:layout_width="0dp"
                 android:layout_height="112dp"
+                android:layout_columnSpan="2"
                 android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="4dp">
 
@@ -388,37 +396,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="0dp"
-                android:layout_height="112dp"
-                android:layout_columnWeight="1"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="4dp">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/cardgreen"
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:padding="12dp">
-
-                    <ImageView
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
-                        android:src="@drawable/ic_agent_chat"
-                        app:tint="#F06292" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:fontFamily="@font/yeonsung_regular"
-                        android:text="Admin Support"
-                        android:textColor="#E91E63"
-                        android:textSize="16sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
         </GridLayout>
 
         <TextView
@@ -880,4 +858,4 @@
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
